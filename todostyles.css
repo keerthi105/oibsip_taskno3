@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('todoimg.jpg');
+            backdrop-filter: blur(0.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.todo-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* Input Containers */
+.input-container, .datetime-container {
+  margin-bottom: 10px;
+}
+
+#task-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.datetime-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#task-date, #task-time {
+  flex: 1;
+  margin: 5px;
+  padding: 8px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#add-btn:hover {
+  background: #388E3C;
+}
+
+/* Filter Incomplete Tasks */
+.filter-container {
+  margin: 10px 0 20px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.filter-container input {
+  margin-right: 5px;
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  flex-wrap: wrap;
+}
+
+#task-list li.completed {
+  text-decoration: line-through;
+  color: gray;
+  background: #e8f5e9;
+}
+
+/* Task Date and Time */
+.task-meta {
+  font-size: 0.8em;
+  color: #666;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  #task-input, #task-date, #task-time {
+    font-size: 0.9em;
+  }
+}

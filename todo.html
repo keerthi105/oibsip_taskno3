@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persistent To-Do List</title>
+  <link rel="stylesheet" href="todostyles.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h1>📝 To-Do List</h1>
+    <div class="input-container">
+      <input type="text" id="task-input" placeholder="Add a new task...">
+    </div>
+    <div class="datetime-container">
+      <input type="date" id="task-date">
+      <input type="time" id="task-time">
+    </div>
+    <button id="add-btn">Add</button>
+    <div class="filter-container">
+      <label>
+        <input type="checkbox" id="filter-incomplete"> Show Incomplete Tasks Only
+      </label>
+    </div>
+    <ul id="task-list"></ul>
+
+
+  </div>
+  <script src="todoscript.js"></script>
+</body>
+</html>
